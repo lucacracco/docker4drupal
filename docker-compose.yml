@@ -196,7 +196,7 @@ services:
 #    expose:
 #      - "3000"
 #    volumes:
-#      - ./:/var/www/html
+#      - $PROJECT_DOCROOT:/var/www/html
 #    command: sh -c 'yarn install && yarn run start'
 
 #  blackfire:
