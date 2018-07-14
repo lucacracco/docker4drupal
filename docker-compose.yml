@@ -18,6 +18,7 @@ services:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
     environment:
+      PHP_FPM_USER: 'wodby'
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST: $DB_HOST
       DB_USER: $DB_USER
@@ -28,6 +29,7 @@ services:
 #      PHP_XDEBUG: 1
 #      PHP_XDEBUG_DEFAULT_ENABLE: 1
 #      PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
+#      PHP_XDEBUG_REMOTE_AUTOSTART: 0
 #      PHP_IDE_CONFIG: serverName=my-ide
 #      PHP_XDEBUG_REMOTE_HOST: host.docker.internal # Docker 18.03+ & Linux/Mac/Win
 #      PHP_XDEBUG_REMOTE_HOST: 172.17.0.1 # Linux, Docker < 18.03
@@ -47,6 +49,7 @@ services:
     depends_on:
       - php
     environment:
+      NGINX_USER: 'wodby'
 #      NGINX_PAGESPEED: "on"
       NGINX_STATIC_CONTENT_OPEN_FILE_CACHE: "off"
       NGINX_ERROR_LOG_LEVEL: debug
@@ -89,6 +92,7 @@ services:
 #    depends_on:
 #      - php
 #    environment:
+#      APACHE_USER: 'wodby'
 #      APACHE_LOG_LEVEL: debug
 #      APACHE_BACKEND_HOST: php
 #      APACHE_SERVER_ROOT: /var/www/html/web
@@ -145,10 +149,14 @@ services:
 #      - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
 
 #  solr:
+#    # For build the core use:
+#    # docker-compose exec solr make create core="my_core" host="localhost" config_set="my_conf" -f /usr/local/bin/actions.mk
 #    image: wodby/drupal-solr:$SOLR_TAG
 #    container_name: "${PROJECT_NAME}_solr"
 #    environment:
 #      SOLR_HEAP: 1024m
+#    volumes:
+#      - ./my_conf:/opt/docker-solr/configsets/my_conf/conf
 #    labels:
 #      - 'traefik.backend=solr'
 #      - 'traefik.port=8983'
