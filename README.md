@@ -7,14 +7,14 @@ Build status: [![Build lucacracco Status](https://travis-ci.org/lucacracco/docke
 **[Docker4Drupal](https://github.com/wodby/docker4drupal)**
 
 [![Build Status](https://travis-ci.org/wodby/docker4drupal.svg?branch=master)](https://travis-ci.org/wodby/docker4drupal)
-[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
-[![Wodby Twitter](https://img.shields.io/twitter/follow/wodbyhq.svg?style=social&label=Follow)](https://twitter.com/wodbyhq)
 
 ## Introduction
 
 Docker4Drupal is a set of docker images optimized for Drupal. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4drupal/releases) to spin up local environment on Linux, Mac OS X and Windows. 
 
-Read [**Getting Started**](http://wodby.com/stacks/drupal/docs/local/quick-start).
+* Read the docs on [**how to use**](https://docs.wodby.com/stacks/drupal/local#usage)
+* Follow [@wodbycloud](https://twitter.com/wodbycloud) for future announcements
+* Join [community slack](https://slack.wodby.com) to ask questions
 
 ## Stack
 
@@ -51,11 +51,15 @@ Supported Drupal versions: 8 / 7 / 6
 
 ## Documentation
 
-Full documentation is available at https://wodby.com/stacks/drupal/docs/local.
+Full documentation is available at https://docs.wodby.com/stacks/drupal/local.
 
-## Deployment
+## Beyond local environment
 
-Deploy consistent docker-based Drupal stack with orchestrations to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub/ada51e9b-2204-45ee-8e49-a4151912a168/detail).
+Docker4Drupal is a project designed to help you spin up local environment with docker-compose. If you want to deploy a consistent stack with orchestrations to your own server, check out [Drupal stack](https://wodby.com/stacks/drupal) on Wodby ![](https://www.google.com/s2/favicons?domain=wodby.com).
+
+## Maintenance
+
+We regularly update images used in this stack and release them together, see [releases page](https://github.com/wodby/docker4drupal/releases) for full changelog and update instructions.  
 
 ## License
 
