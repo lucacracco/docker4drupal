@@ -9,7 +9,7 @@ PHP_VER ?= 7.2
 # in the original project. I leave the structure and operation in case in
 # the future it needs to apply personal tests to the changes made.
 #test:
-#	cd ./test/$(DRUPAL_VER) && PHP_VER=$(PHP_VER) ./run.sh
+#	cd ./tests/$(DRUPAL_VER) && PHP_VER=$(PHP_VER) ./run.sh
 
 test:
 	@echo "There are no tests to be run."
