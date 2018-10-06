@@ -5,12 +5,24 @@ services:
     image: wodby/drupal:$DRUPAL_TAG
     environment:
       PHP_FPM_CLEAR_ENV: "no"
+      PHP_FPM_USER: 'wodby'
     volumes:
       - codebase:/var/www/html
 
   nginx:
+    environment:
+      NGINX_USER: 'wodby'
     volumes:
       - codebase:/var/www/html
+
+#  apache:
+#    environment:
+#      APACHE_USER: 'wodby'
+
+  traefik:
+    ports:
+      - '80:80'
+      - '8080:8080' # Dashboard
 
 volumes:
   codebase:
