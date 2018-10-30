@@ -28,20 +28,21 @@ The Drupal stack consist of the following containers:
 | [PHP]           | 7.2, 7.1, 5.6           | `php`           | [wodby/drupal-php]                 |         |
 | [MariaDB]       | 10.3, 10.2, 10.1        | `mariadb`       | [wodby/mariadb]                    | ✓       |
 | [PostgreSQL]    | 10, 9.x                 | `postgres`      | [wodby/postgres]                   |         |
-| [Redis]         | 4.0, 3.2                | `redis`         | [wodby/redis]                      |         |
+| [Redis]         | 5, 4                    | `redis`         | [wodby/redis]                      |         |
+| [Memcached]     | 1                       | `memcached`     | [wodby/memcached]                  |         |
 | [Varnish]       | 4.1                     | `varnish`       | [wodby/varnish]                    |         |
-| [Node.js]       | 10.9, 8.11, 6.14        | `node`          | [wodby/node]                       |         |
+| [Node.js]       | 10, 8, 6                | `node`          | [wodby/node]                       |         |
 | [Drupal node]   | 1.0                     | `drupal-node`   | [wodby/drupal-node]                |         |
 | [Solr]          | 7.x, 6.6, 5.5, 5.4      | `solr`          | [wodby/solr]                       |         |
 | [Elasticsearch] | 6.x, 5.6, 5.5, 5.4      | `elasticsearch` | [wodby/elasticsearch]              |         |
 | [Kibana]        | 6.x, 5.6, 5.5, 5.4      | `kibana`        | [wodby/kibana]                     |         |
-| [Memcached]     | 1.5                     | `memcached`     | [wodby/memcached]                  |         |
-| [Webgrind]      | 1.5                     | `webgrind`      | [wodby/webgrind]                   |         |
-| [Blackfire]     | latest                  | `blackfire`     | [blackfire/blackfire]              |         |
-| [Rsyslog]       | latest                  | `rsyslog`       | [wodby/rsyslog]                    |         |
-| [AthenaPDF]     | 2.10.0                  | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
-| [Mailhog]       | latest                  | `mailhog`       | [mailhog/mailhog]                  | ✓       |
 | [OpenSMTPD]     | 6.0                     | `opensmtpd`     | [wodby/opensmtpd]                  |         |
+| [Mailhog]       | latest                  | `mailhog`       | [mailhog/mailhog]                  | ✓       |
+| [AthenaPDF]     | 2.10.0                  | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
+| [Rsyslog]       | latest                  | `rsyslog`       | [wodby/rsyslog]                    |         |
+| [Blackfire]     | latest                  | `blackfire`     | [blackfire/blackfire]              |         |
+| [Webgrind]      | 1.5                     | `webgrind`      | [wodby/webgrind]                   |         |
+| [Xhprof viewer] | latest                  | `xhprof`        | [wodby/xhprof]                     |         |
 | Adminer         | 4.6                     | `adminer`       | [wodby/adminer]                    |         |
 | phpMyAdmin      | latest                  | `pma`           | [phpmyadmin/phpmyadmin]            |         |
 | Portainer       | latest                  | `portainer`     | [portainer/portainer]              | ✓       |
@@ -85,28 +86,30 @@ This project is licensed under the MIT open source license.
 [Solr]: https://wodby.com/docs/stacks/drupal/containers#solr
 [Varnish]: https://wodby.com/docs/stacks/drupal/containers#varnish
 [Webgrind]: https://wodby.com/docs/stacks/drupal/containers#webgrind
+[XHProf viewer]: https://wodby.com/docs/stacks/php/containers#xhprof-viewer
 
-[wodby/nginx]: https://github.com/wodby/nginx
-[wodby/apache]: https://github.com/wodby/apache
-[wodby/drupal]: https://github.com/wodby/drupal
-[wodby/drupal-php]: https://github.com/wodby/drupal-php
-[wodby/mariadb]: https://github.com/wodby/mariadb
-[wodby/postgres]: https://github.com/wodby/postgres
-[wodby/redis]: https://github.com/wodby/redis
-[wodby/varnish]: https://github.com/wodby/varnish
-[wodby/solr]: https://github.com/wodby/solr
-[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
-[wodby/kibana]: https://github.com/wodby/kibana
-[wodby/node]: https://github.com/wodby/node
-[wodby/drupal-node]: https://github.com/wodby/drupal-node
-[wodby/memcached]: https://github.com/wodby/memcached
-[wodby/opensmtpd]: https://github.com/wodby/opensmtpd
-[wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
-[blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
-[wodby/rsyslog]: https://hub.docker.com/r/wodby/rsyslog
+[_/traefik]: https://hub.docker.com/_/traefik
 [arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
+[blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
-[wodby/adminer]: https://hub.docker.com/r/wodby/adminer
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 [portainer/portainer]: https://hub.docker.com/r/portainer/portainer
-[_/traefik]: https://hub.docker.com/_/traefik
+[wodby/adminer]: https://hub.docker.com/r/wodby/adminer
+[wodby/apache]: https://github.com/wodby/apache
+[wodby/drupal-node]: https://github.com/wodby/drupal-node
+[wodby/drupal-php]: https://github.com/wodby/drupal-php
+[wodby/drupal]: https://github.com/wodby/drupal
+[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
+[wodby/kibana]: https://github.com/wodby/kibana
+[wodby/mariadb]: https://github.com/wodby/mariadb
+[wodby/memcached]: https://github.com/wodby/memcached
+[wodby/nginx]: https://github.com/wodby/nginx
+[wodby/node]: https://github.com/wodby/node
+[wodby/opensmtpd]: https://github.com/wodby/opensmtpd
+[wodby/postgres]: https://github.com/wodby/postgres
+[wodby/redis]: https://github.com/wodby/redis
+[wodby/rsyslog]: https://hub.docker.com/r/wodby/rsyslog
+[wodby/solr]: https://github.com/wodby/solr
+[wodby/varnish]: https://github.com/wodby/varnish
+[wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
+[wodby/xhprof]: https://hub.docker.com/r/wodby/xhprof
