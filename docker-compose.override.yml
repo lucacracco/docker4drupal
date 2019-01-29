@@ -5,7 +5,6 @@ services:
     image: wodby/drupal:$DRUPAL_TAG
     environment:
       PHP_FPM_CLEAR_ENV: "no"
-      PHP_FPM_USER: 'wodby'
     volumes:
       - codebase:/var/www/html
 
