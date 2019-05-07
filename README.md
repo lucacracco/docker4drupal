@@ -21,7 +21,7 @@ Docker4Drupal is a set of docker images optimized for Drupal. Use `docker-compos
 The Drupal stack consist of the following containers:
 
 | Container       | Versions                | Service name    | Image                              | Default |
-| --------------- | ----------------------- | --------------- | ---------------------------------- | ------- |
+| --------------- | -------------------     | --------------- | ---------------------------------- | ------- |
 | [Nginx]         | 1.15, 1.14              | `nginx`         | [wodby/nginx]                      | ✓       |
 | [Apache]        | 2.4                     | `apache`        | [wodby/apache]                     |         |
 | [Drupal]        | 8, 7                    | `php`           | [wodby/drupal]                     | ✓       |
@@ -33,9 +33,9 @@ The Drupal stack consist of the following containers:
 | [Varnish]       | 6.0, 4.1                | `varnish`       | [wodby/varnish]                    |         |
 | [Node.js]       | 10, 8, 6                | `node`          | [wodby/node]                       |         |
 | [Drupal node]   | 1.0                     | `drupal-node`   | [wodby/drupal-node]                |         |
-| [Solr]          | 7.x, 6.6, 5.5, 5.4      | `solr`          | [wodby/solr]                       |         |
-| [Elasticsearch] | 6.x, 5.6, 5.5, 5.4      | `elasticsearch` | [wodby/elasticsearch]              |         |
-| [Kibana]        | 6.x, 5.6, 5.5, 5.4      | `kibana`        | [wodby/kibana]                     |         |
+| [Solr]          | 7.7, 7.6, 7.5, 6.6, 5.5 | `solr`          | [wodby/solr]                       |         |
+| [Elasticsearch] | 6.7, 5.6                | `elasticsearch` | [wodby/elasticsearch]              |         |
+| [Kibana]        | 6.7, 5.6                | `kibana`        | [wodby/kibana]                     |         |
 | [OpenSMTPD]     | 6.0                     | `opensmtpd`     | [wodby/opensmtpd]                  |         |
 | [Mailhog]       | latest                  | `mailhog`       | [mailhog/mailhog]                  | ✓       |
 | [AthenaPDF]     | 2.10.0                  | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
@@ -49,6 +49,8 @@ The Drupal stack consist of the following containers:
 | Traefik         | latest                  | `traefik`       | [_/traefik]                        | ✓       |
 
 Supported Drupal versions: 8 / 7
+
+❗️PHP 5.6 [has reached end of life](http://php.net/supported-versions.php) and no longer supported by PHP team. PHP 7.1 is currently in security fix only mode. We strongly advise you to migrate to the latest stable PHP version.   
 
 ## Documentation
 
