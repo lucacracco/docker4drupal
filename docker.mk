@@ -59,7 +59,7 @@ shell:
 
 ## bash	:	Access `php` container via shell(bash).
 .PHONY: bash
-shell:
+bash:
 	docker exec -ti -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") bash
 
 ## composer	:	Executes `composer` command in a specified `COMPOSER_ROOT` directory (default is `/var/www/html`).
