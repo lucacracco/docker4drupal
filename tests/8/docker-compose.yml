@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: $DB_PASSWORD
 
   php:
-    image: wodby/drupal:8-$PHP_VER-$DRUPAL_STABILITY_TAG
+    image: "wodby/drupal:8-${PHP_VER}-${DRUPAL_STABILITY_TAG}"
     environment:
       # To skip auto init.
       WODBY_APP_NAME: drupal
@@ -30,7 +30,7 @@ services:
       - ./tests.sh:/usr/local/bin/tests.sh
       - ./test.settings.php:/var/www/html/web/sites/default/test.settings.php
       - ./varnish-purger.yml:/var/www/html/web/varnish-purger.yml
-      - ./search-api-solr-server.yml:/var/www/html/web/search_api.server.solr_6_4.yml
+      - ./search_api.server.solr.yml:/var/www/html/web/search_api.server.solr.yml
 
   nginx:
     image: wodby/nginx:$NGINX_TAG
